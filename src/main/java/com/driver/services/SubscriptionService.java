@@ -42,7 +42,7 @@ public class SubscriptionService {
             amount = amountWithNoOfScreenAmount ;
         }
         else{
-            Integer amountWithNoScreenAmount = 1000+(350*numberOfScreen)
+            Integer amountWithNoScreenAmount = 1000+(350*numberOfScreen);
                    amount = amountWithNoScreenAmount ;
         }
         subscription.setUser(user);
