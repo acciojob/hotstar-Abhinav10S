@@ -48,6 +48,7 @@ public class SubscriptionService {
         subscription.setUser(user);
         subscription.setTotalAmountPaid(amount);
         subscription.setNoOfScreensSubscribed(numberOfScreen);
+        user.setSubscription(subscription);
         return amount;
     }
 
@@ -82,7 +83,7 @@ public class SubscriptionService {
 
         //We need to find out total Revenue of hotstar : from all the subscriptions combined
         //Hint is to use findAll function from the SubscriptionDb
-        List<Subscription> subscriptionList = new ArrayList<>() ;
+        List<Subscription> subscriptionList = subscriptionRepository.findAll() ;
         Integer totalAmount = 0 ;
 
         for(Subscription subscription : subscriptionList){
